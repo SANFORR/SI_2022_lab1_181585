@@ -1,5 +1,5 @@
-Apple
-Orrange[A[Dx2[D[B[Cx3
+Apple x3
+Orrange x2
 potato x1
 Chairs x4
-cup x3
+cup x10
