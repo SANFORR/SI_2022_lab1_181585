@@ -3,3 +3,5 @@ Orrange x15
 potato x1
 Chairs x21
 cup x3
+cigarets x3
+
