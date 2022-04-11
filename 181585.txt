@@ -1,0 +1,231 @@
+Name: Mohammad Alyousef
+Index:181585
+
+
+----------------------
+
+Steps 1-9:
+- I have made it public and I attatch .readME file
+
+//Клонирање на репозиториумот: 
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~ (master)
+$ git clone https://github.com/SANFORR/SI_2022_lab1_181585.git
+Cloning into 'SI_2022_lab1_181585'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+//I have added a text using cat shppoing_list.txt
+// I have made the commit
+
+$ git commit -m " Add quantities to the items."
+[master f5cbadd]  Add quantities to the items.
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+// I have used nano to add quntity to the list
+
+// creating 2 branches
+log: 
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~ (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~ (branch1)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+// I used git fetch --prune to sync all branches
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch1)
+$ git remote add SI_2022_lab1_181585 https://github.com/SANFORR/SI_2022_lab1_181585.git
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch1)
+$ ls -1
+README.md
+shopping_list.txt
+SI_2022_lab1_181585/
+
+$ git remote -v
+SI_2022_lab1_181585     https://github.com/SANFORR/SI_2022_lab1_181585.git (fetch)
+SI_2022_lab1_181585     https://github.com/SANFORR/SI_2022_lab1_181585.git (push)
+origin  https://github.com/SANFORR/SI_2022_lab1_181585.git (fetch)
+origin  https://github.com/SANFORR/SI_2022_lab1_181585.git (push)
+
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 372 bytes | 186.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SANFORR/SI_2022_lab1_181585.git
+   6a00abc..f5cbadd  master -> master
+
+// tasks from 10-22:
+
+// I switched to branch1 by using $git checkout branch1
+// then I changed the quantity of the 5th item:
+$ cat > shopping_list.txt
+cups x10
+
+//I commit the changes as well.
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch1)
+$ git add shopping_list.txt
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch1)
+$ git commit -m "Change quantity of item # 5 "
+[branch1 3f0f5f7] Change quantity of item # 5
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+//I returned to the master
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+// I have changed the second item and commited by using
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ nano shopping_list.txt
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git commit -m "Changed the second item"
+[master 03eaf44] Changed the second item
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SANFORR/SI_2022_lab1_181585.git
+   f5cbadd..03eaf44  master -> master
+
+$ git push origin master
+Everything up-to-date
+// I have pushed branch1
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git push origin branch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 361 bytes | 361.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/SANFORR/SI_2022_lab1_181585/pull/new/branch1
+remote:
+To https://github.com/SANFORR/SI_2022_lab1_181585.git
+ * [new branch]      branch1 -> branch1
+
+
+//tasks from 15-23
+
+//switching to branch2 
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+//chaning item4 on branch 2
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch2)
+$ nano shopping_list.txt
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch2)
+$ git add shopping_list.txt
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch2)
+$ git commit -m "Modify item # 4"
+[branch2 503b1a8] Modify item # 4
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch2)
+$ nano shopping_list.txt                      22734546 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                              23591010 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                                              24326149 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+              24638680 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                              24873302 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                              25186040 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                              25702513 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                                              25727842 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+              25764774 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                              25791952 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                              25841704 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                              25862354 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                                              25894418 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+              25922575 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                              25964803 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                              25988726 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                              26026420 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                                                                              26056215 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+              26088785 [sig] bash 2236! sigpacket::process: Suppressing signal 18 to win32 process (pid 25280)
+                              26135728 [sig] bash 2236! sigpacket::process: Supp[branch2 811dfb1] Modify item # 4 and adding 6th itmes
+ Date: Mon Apr 11 11:39:26 2022 -0400
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+
+
+// I have printed all the logs: 
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (branch2)
+$ git log
+commit 811dfb1ec07fbd38e6f4fe4a1530c42e3c2669f9 (HEAD -> branch2)
+Author: DESKTOP-9N4STTI\Mark <austenmark8@gmail.com>
+Date:   Mon Apr 11 11:39:26 2022 -0400
+
+    Modify item # 4 and adding 6th itmes
+
+commit f5cbadda9b4607b61e8ef9a56e9ee8408d866455
+Author: DESKTOP-9N4STTI\Mark <austenmark8@gmail.com>
+Date:   Sun Apr 10 17:28:49 2022 -0400
+
+     Add quantities to the items.
+
+commit 6a00abc82ddd55435d2f8aaf226dc152e600a7ad
+Author: Mohammad alyousef <60047318+SANFORR@users.noreply.github.com>
+Date:   Sun Apr 10 09:38:45 2022 -0400
+
+    Update README.md
+
+commit 51759b4d4ffd760e46f6eef51e3513fe503b9929
+Author: Mohammad alyousef <60047318+SANFORR@users.noreply.github.com>
+Date:   Sun Apr 10 09:34:10 2022 -0400
+
+    Initial commit
+
+//switced to master to merge
+//pulled 
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git pull origin master
+From https://github.com/SANFORR/SI_2022_lab1_181585
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+//merging
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git merge branch1
+Already up to date.
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git  merge branch2
+Already up to date.
+
+Mosan@DESKTOP-9N4STTI MINGW64 ~/SI_2022_lab1_181585 (master)
+$ git merge master
+Already up to date.
+
+// now everything is ready.... and I Will upload this notes.
